@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+option java_outer_classname = "LaminatePackingProto";
+
+package com.smartfactory;
+
+service LaminatePacking {
+  rpc ProductionLineControl(ProductionLineControlRequest) returns (ProductionLineControlResponse);
+  rpc StartProduction(StartProductionRequest) returns (StartProductionResponse);
+  rpc StopProduction(StopProductionRequest) returns (StopProductionResponse);
+  rpc AddOrder(AddOrderRequest) returns (AddOrderResponse);
+  rpc UpdateOrder(UpdateOrderRequest) returns (UpdateOrderResponse);
+  rpc ProductionSurveillance(ProductionSurveillanceRequest) returns (ProductionSurveillanceResponse);
+  rpc PackagingLineJamAlerts(PackagingLineJamAlertsRequest) returns (PackagingLineJamAlertsResponse);
+  rpc ProductionScheduling(ProductionSchedulingRequest) returns (ProductionSchedulingResponse);
+}
+
+message ProductionLineControlRequest {
+  string orderID = 1;
+  int32 quantity = 2;
+}
+
+message ProductionLineControlResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message StartProductionRequest {
+  string orderID = 1;
+}
+
+message StartProductionResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message StopProductionRequest {
+  string orderID = 1;
+  string reason = 2;
+}
+
+message StopProductionResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message AddOrderRequest {
+  string orderID = 1;
+  int32 quantity = 2;
+  string description = 3;
+}
+
+message AddOrderResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message UpdateOrderRequest {
+  string orderID = 1;
+  int32 quantity = 2;
+  string description = 3;
+}
+
+message UpdateOrderResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message ProductionSurveillanceRequest {
+  string stage = 1;
+  string inspectionResult = 2;
+}
+
+message ProductionSurveillanceResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message PackagingLineJamAlertsRequest {
+  string sensorID = 1;
+  string timestamp = 2;
+}
+
+message PackagingLineJamAlertsResponse {
+  string status = 1;
+  string message = 2;
+}
+
+message ProductionSchedulingRequest {
+  string orderID = 1;
+  string scheduledTime = 2;
+}
+
+message ProductionSchedulingResponse {
+  string status = 1;
+  string message = 2;
+}
