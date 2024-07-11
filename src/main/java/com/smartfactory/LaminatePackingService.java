@@ -73,7 +73,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         String description = request.getDescription();
 
         String status = "ADDED";
-        String message = "Order " + orderId + " with quantity " + quantity + " and description \"" + description + "\" added.";
+        String message = "Order " + orderId + " quantity " + quantity + " and description \"" + description + "\" added.";
 
         LaminatePackingProto.AddOrderResponse response = LaminatePackingProto.AddOrderResponse.newBuilder()
                 .setStatus(status)
