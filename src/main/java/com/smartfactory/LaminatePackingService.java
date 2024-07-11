@@ -7,6 +7,7 @@ import com.smartfactory.LaminatePackingProto.ProductionLineControlRequest;
 import com.smartfactory.LaminatePackingProto.ProductionLineControlResponse;
 import com.smartfactory.LaminatePackingProto.StartProductionRequest;
 import com.smartfactory.LaminatePackingProto.StartProductionResponse;
+import com.smartfactory.LaminatePackingProto.StopProductionRequest;
 
 import java.io.IOException;
 
@@ -48,6 +49,24 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
     }
 
     // Implement other RPCs
+
+    @Override
+    public void stopProduction(com.smartfactory.LaminatePackingProto.StopProductionRequest request, StreamObserver<com.smartfactory.LaminatePackingProto.StopProductionResponse> responseObserver) {
+        String orderId = request.getOrderID();
+        String reason = request.getReason();
+
+        String status = "STOPPED";
+        String message = "Production for order " + orderId + " has stopped. Reason: " + reason;
+
+        com.smartfactory.LaminatePackingProto.StopProductionResponse response = com.smartfactory.LaminatePackingProto.StopProductionResponse.newBuilder()
+                .setStatus(status)
+                .setMessage(message)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder.forPort(50051)

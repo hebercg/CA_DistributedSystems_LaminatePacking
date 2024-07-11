@@ -29,9 +29,37 @@ public class ProductionLineControl {
 
         JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
     }
+    public void startProduction() {
+        String orderId = JOptionPane.showInputDialog("Enter Order ID:");
+
+        com.smartfactory.LaminatePackingProto.StartProductionRequest request = com.smartfactory.LaminatePackingProto.StartProductionRequest.newBuilder()
+                .setOrderID(orderId)
+                .build();
+
+        com.smartfactory.LaminatePackingProto.StartProductionResponse response = blockingStub.startProduction(request);
+
+        JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
+    }
+
+    public void stopProduction() {
+        String orderId = JOptionPane.showInputDialog("Enter Order ID:");
+        String reason = JOptionPane.showInputDialog("Enter Reason for Stopping:");
+
+        com.smartfactory.LaminatePackingProto.StopProductionRequest request = com.smartfactory.LaminatePackingProto.StopProductionRequest.newBuilder()
+                .setOrderID(orderId)
+                .setReason(reason)
+                .build();
+
+        com.smartfactory.LaminatePackingProto.StopProductionResponse response = blockingStub.stopProduction(request);
+
+        JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
+    }
 
     public static void main(String[] args) {
         ProductionLineControl controller = new ProductionLineControl();
         controller.addOrder();
+        controller.startProduction();
+        controller.stopProduction();
+
     }
 }
