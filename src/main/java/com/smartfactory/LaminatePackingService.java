@@ -19,8 +19,8 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         int quantity = request.getQuantity();
 
         // Process the order
-        String status = "SUCCESS";
-        String message = "Order " + orderId + " with quantity " + quantity + " processed successfully.";
+        String status = "Success";
+        String message = "Order " + orderId + " quantity " + quantity + " processed successfully.";
 
         ProductionLineControlResponse response = ProductionLineControlResponse.newBuilder()
                 .setStatus(status)
@@ -36,7 +36,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         String orderId = request.getOrderID();
 
         // Process the start of the production
-        String status = "STARTED";
+        String status = "Started";
         String message = "Production for order " + orderId + " has started.";
 
         StartProductionResponse response = StartProductionResponse.newBuilder()
@@ -55,7 +55,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         String orderId = request.getOrderID();
         String reason = request.getReason();
 
-        String status = "STOPPED";
+        String status = "Stropped";
         String message = "Production for order " + orderId + " has stopped. Reason: " + reason;
 
         com.smartfactory.LaminatePackingProto.StopProductionResponse response = com.smartfactory.LaminatePackingProto.StopProductionResponse.newBuilder()
@@ -74,7 +74,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
                 .build()
                 .start();
 
-        System.out.println("Server started, listening on " + server.getPort());
+        System.out.println("Server started " + server.getPort());
         server.awaitTermination();
     }
 }
