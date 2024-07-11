@@ -1,21 +1,22 @@
 syntax = "proto3";
 
+option java_outer_classname = "LaminatePackingProto";
+
 package com.smartfactory;
 
-service laminatepacking{
-  rpc ProductionLineControl (ProductionLineControlRequests) returns (ProductionLineControlResponse);
-  rpc StartProduction (StartProductionRequests) returns (StartProductionResponse);
-  rpc StopProduction (StopProductionlRequests) returns (StopProductionResponse);
-  rpc AddOrder (AddOrderRequests) returns (AddOrderResponse);
-  rpc ProductionSurveillance (ProductionSurveillanceRequests) returns (ProductionSurveillanceResponse);
-  rpc PackagingLineJamAlerts (PackagingLineJamAlertsRequests) returns (PackagingLineJamAlertsResponse);
-  rpc ProductionScheduling (ProductionSchedulingRequests) returns (ProductionSchedulingResponse);
+service LaminatePacking {
+  rpc ProductionLineControl(ProductionLineControlRequest) returns (ProductionLineControlResponse);
+  rpc StartProduction(StartProductionRequest) returns (StartProductionResponse);
+  rpc StopProduction(StopProductionRequest) returns (StopProductionResponse);
+  rpc AddOrder(AddOrderRequest) returns (AddOrderResponse);
+  rpc UpdateOrder(UpdateOrderRequest) returns (UpdateOrderResponse);
+  rpc ProductionSurveillance(ProductionSurveillanceRequest) returns (ProductionSurveillanceResponse);
+  rpc PackagingLineJamAlerts(PackagingLineJamAlertsRequest) returns (PackagingLineJamAlertsResponse);
+  rpc ProductionScheduling(ProductionSchedulingRequest) returns (ProductionSchedulingResponse);
 }
 
 message ProductionLineControlRequest {
-  //first field for status
   string orderID = 1;
-  //second field for messages]
   int32 quantity = 2;
 }
 

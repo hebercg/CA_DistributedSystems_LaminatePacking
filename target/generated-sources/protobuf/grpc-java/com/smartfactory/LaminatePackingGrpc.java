@@ -14,29 +14,29 @@ public final class LaminatePackingGrpc {
   public static final String SERVICE_NAME = "com.smartfactory.LaminatePacking";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionLineControlRequest,
-      com.smartfactory.Laminatepacking.ProductionLineControlResponse> getProductionLineControlMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionLineControlRequest,
+      com.smartfactory.LaminatePackingProto.ProductionLineControlResponse> getProductionLineControlMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ProductionLineControl",
-      requestType = com.smartfactory.Laminatepacking.ProductionLineControlRequest.class,
-      responseType = com.smartfactory.Laminatepacking.ProductionLineControlResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.ProductionLineControlRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.ProductionLineControlResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionLineControlRequest,
-      com.smartfactory.Laminatepacking.ProductionLineControlResponse> getProductionLineControlMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionLineControlRequest, com.smartfactory.Laminatepacking.ProductionLineControlResponse> getProductionLineControlMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionLineControlRequest,
+      com.smartfactory.LaminatePackingProto.ProductionLineControlResponse> getProductionLineControlMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionLineControlRequest, com.smartfactory.LaminatePackingProto.ProductionLineControlResponse> getProductionLineControlMethod;
     if ((getProductionLineControlMethod = LaminatePackingGrpc.getProductionLineControlMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getProductionLineControlMethod = LaminatePackingGrpc.getProductionLineControlMethod) == null) {
           LaminatePackingGrpc.getProductionLineControlMethod = getProductionLineControlMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.ProductionLineControlRequest, com.smartfactory.Laminatepacking.ProductionLineControlResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.ProductionLineControlRequest, com.smartfactory.LaminatePackingProto.ProductionLineControlResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProductionLineControl"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.ProductionLineControlRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.ProductionLineControlRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.ProductionLineControlResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.ProductionLineControlResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("ProductionLineControl"))
               .build();
         }
@@ -45,29 +45,29 @@ public final class LaminatePackingGrpc {
     return getProductionLineControlMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.StartProductionRequest,
-      com.smartfactory.Laminatepacking.StartProductionResponse> getStartProductionMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.StartProductionRequest,
+      com.smartfactory.LaminatePackingProto.StartProductionResponse> getStartProductionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StartProduction",
-      requestType = com.smartfactory.Laminatepacking.StartProductionRequest.class,
-      responseType = com.smartfactory.Laminatepacking.StartProductionResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.StartProductionRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.StartProductionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.StartProductionRequest,
-      com.smartfactory.Laminatepacking.StartProductionResponse> getStartProductionMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.StartProductionRequest, com.smartfactory.Laminatepacking.StartProductionResponse> getStartProductionMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.StartProductionRequest,
+      com.smartfactory.LaminatePackingProto.StartProductionResponse> getStartProductionMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.StartProductionRequest, com.smartfactory.LaminatePackingProto.StartProductionResponse> getStartProductionMethod;
     if ((getStartProductionMethod = LaminatePackingGrpc.getStartProductionMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getStartProductionMethod = LaminatePackingGrpc.getStartProductionMethod) == null) {
           LaminatePackingGrpc.getStartProductionMethod = getStartProductionMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.StartProductionRequest, com.smartfactory.Laminatepacking.StartProductionResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.StartProductionRequest, com.smartfactory.LaminatePackingProto.StartProductionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StartProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.StartProductionRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.StartProductionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.StartProductionResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.StartProductionResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("StartProduction"))
               .build();
         }
@@ -76,29 +76,29 @@ public final class LaminatePackingGrpc {
     return getStartProductionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.StopProductionRequest,
-      com.smartfactory.Laminatepacking.StopProductionResponse> getStopProductionMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.StopProductionRequest,
+      com.smartfactory.LaminatePackingProto.StopProductionResponse> getStopProductionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StopProduction",
-      requestType = com.smartfactory.Laminatepacking.StopProductionRequest.class,
-      responseType = com.smartfactory.Laminatepacking.StopProductionResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.StopProductionRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.StopProductionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.StopProductionRequest,
-      com.smartfactory.Laminatepacking.StopProductionResponse> getStopProductionMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.StopProductionRequest, com.smartfactory.Laminatepacking.StopProductionResponse> getStopProductionMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.StopProductionRequest,
+      com.smartfactory.LaminatePackingProto.StopProductionResponse> getStopProductionMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.StopProductionRequest, com.smartfactory.LaminatePackingProto.StopProductionResponse> getStopProductionMethod;
     if ((getStopProductionMethod = LaminatePackingGrpc.getStopProductionMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getStopProductionMethod = LaminatePackingGrpc.getStopProductionMethod) == null) {
           LaminatePackingGrpc.getStopProductionMethod = getStopProductionMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.StopProductionRequest, com.smartfactory.Laminatepacking.StopProductionResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.StopProductionRequest, com.smartfactory.LaminatePackingProto.StopProductionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.StopProductionRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.StopProductionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.StopProductionResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.StopProductionResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("StopProduction"))
               .build();
         }
@@ -107,29 +107,29 @@ public final class LaminatePackingGrpc {
     return getStopProductionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.AddOrderRequest,
-      com.smartfactory.Laminatepacking.AddOrderResponse> getAddOrderMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.AddOrderRequest,
+      com.smartfactory.LaminatePackingProto.AddOrderResponse> getAddOrderMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "AddOrder",
-      requestType = com.smartfactory.Laminatepacking.AddOrderRequest.class,
-      responseType = com.smartfactory.Laminatepacking.AddOrderResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.AddOrderRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.AddOrderResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.AddOrderRequest,
-      com.smartfactory.Laminatepacking.AddOrderResponse> getAddOrderMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.AddOrderRequest, com.smartfactory.Laminatepacking.AddOrderResponse> getAddOrderMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.AddOrderRequest,
+      com.smartfactory.LaminatePackingProto.AddOrderResponse> getAddOrderMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.AddOrderRequest, com.smartfactory.LaminatePackingProto.AddOrderResponse> getAddOrderMethod;
     if ((getAddOrderMethod = LaminatePackingGrpc.getAddOrderMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getAddOrderMethod = LaminatePackingGrpc.getAddOrderMethod) == null) {
           LaminatePackingGrpc.getAddOrderMethod = getAddOrderMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.AddOrderRequest, com.smartfactory.Laminatepacking.AddOrderResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.AddOrderRequest, com.smartfactory.LaminatePackingProto.AddOrderResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddOrder"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.AddOrderRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.AddOrderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.AddOrderResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.AddOrderResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("AddOrder"))
               .build();
         }
@@ -138,29 +138,29 @@ public final class LaminatePackingGrpc {
     return getAddOrderMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.UpdateOrderRequest,
-      com.smartfactory.Laminatepacking.UpdateOrderResponse> getUpdateOrderMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.UpdateOrderRequest,
+      com.smartfactory.LaminatePackingProto.UpdateOrderResponse> getUpdateOrderMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateOrder",
-      requestType = com.smartfactory.Laminatepacking.UpdateOrderRequest.class,
-      responseType = com.smartfactory.Laminatepacking.UpdateOrderResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.UpdateOrderRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.UpdateOrderResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.UpdateOrderRequest,
-      com.smartfactory.Laminatepacking.UpdateOrderResponse> getUpdateOrderMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.UpdateOrderRequest, com.smartfactory.Laminatepacking.UpdateOrderResponse> getUpdateOrderMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.UpdateOrderRequest,
+      com.smartfactory.LaminatePackingProto.UpdateOrderResponse> getUpdateOrderMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.UpdateOrderRequest, com.smartfactory.LaminatePackingProto.UpdateOrderResponse> getUpdateOrderMethod;
     if ((getUpdateOrderMethod = LaminatePackingGrpc.getUpdateOrderMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getUpdateOrderMethod = LaminatePackingGrpc.getUpdateOrderMethod) == null) {
           LaminatePackingGrpc.getUpdateOrderMethod = getUpdateOrderMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.UpdateOrderRequest, com.smartfactory.Laminatepacking.UpdateOrderResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.UpdateOrderRequest, com.smartfactory.LaminatePackingProto.UpdateOrderResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrder"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.UpdateOrderRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.UpdateOrderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.UpdateOrderResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.UpdateOrderResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("UpdateOrder"))
               .build();
         }
@@ -169,29 +169,29 @@ public final class LaminatePackingGrpc {
     return getUpdateOrderMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionSurveillanceRequest,
-      com.smartfactory.Laminatepacking.ProductionSurveillanceResponse> getProductionSurveillanceMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest,
+      com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse> getProductionSurveillanceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ProductionSurveillance",
-      requestType = com.smartfactory.Laminatepacking.ProductionSurveillanceRequest.class,
-      responseType = com.smartfactory.Laminatepacking.ProductionSurveillanceResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionSurveillanceRequest,
-      com.smartfactory.Laminatepacking.ProductionSurveillanceResponse> getProductionSurveillanceMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionSurveillanceRequest, com.smartfactory.Laminatepacking.ProductionSurveillanceResponse> getProductionSurveillanceMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest,
+      com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse> getProductionSurveillanceMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest, com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse> getProductionSurveillanceMethod;
     if ((getProductionSurveillanceMethod = LaminatePackingGrpc.getProductionSurveillanceMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getProductionSurveillanceMethod = LaminatePackingGrpc.getProductionSurveillanceMethod) == null) {
           LaminatePackingGrpc.getProductionSurveillanceMethod = getProductionSurveillanceMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.ProductionSurveillanceRequest, com.smartfactory.Laminatepacking.ProductionSurveillanceResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest, com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProductionSurveillance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.ProductionSurveillanceRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.ProductionSurveillanceResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("ProductionSurveillance"))
               .build();
         }
@@ -200,29 +200,29 @@ public final class LaminatePackingGrpc {
     return getProductionSurveillanceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest,
-      com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse> getPackagingLineJamAlertsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest,
+      com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse> getPackagingLineJamAlertsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "PackagingLineJamAlerts",
-      requestType = com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest.class,
-      responseType = com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest,
-      com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse> getPackagingLineJamAlertsMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest, com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse> getPackagingLineJamAlertsMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest,
+      com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse> getPackagingLineJamAlertsMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest, com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse> getPackagingLineJamAlertsMethod;
     if ((getPackagingLineJamAlertsMethod = LaminatePackingGrpc.getPackagingLineJamAlertsMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getPackagingLineJamAlertsMethod = LaminatePackingGrpc.getPackagingLineJamAlertsMethod) == null) {
           LaminatePackingGrpc.getPackagingLineJamAlertsMethod = getPackagingLineJamAlertsMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest, com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest, com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PackagingLineJamAlerts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("PackagingLineJamAlerts"))
               .build();
         }
@@ -231,29 +231,29 @@ public final class LaminatePackingGrpc {
     return getPackagingLineJamAlertsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionSchedulingRequest,
-      com.smartfactory.Laminatepacking.ProductionSchedulingResponse> getProductionSchedulingMethod;
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest,
+      com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse> getProductionSchedulingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ProductionScheduling",
-      requestType = com.smartfactory.Laminatepacking.ProductionSchedulingRequest.class,
-      responseType = com.smartfactory.Laminatepacking.ProductionSchedulingResponse.class,
+      requestType = com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionSchedulingRequest,
-      com.smartfactory.Laminatepacking.ProductionSchedulingResponse> getProductionSchedulingMethod() {
-    io.grpc.MethodDescriptor<com.smartfactory.Laminatepacking.ProductionSchedulingRequest, com.smartfactory.Laminatepacking.ProductionSchedulingResponse> getProductionSchedulingMethod;
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest,
+      com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse> getProductionSchedulingMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest, com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse> getProductionSchedulingMethod;
     if ((getProductionSchedulingMethod = LaminatePackingGrpc.getProductionSchedulingMethod) == null) {
       synchronized (LaminatePackingGrpc.class) {
         if ((getProductionSchedulingMethod = LaminatePackingGrpc.getProductionSchedulingMethod) == null) {
           LaminatePackingGrpc.getProductionSchedulingMethod = getProductionSchedulingMethod =
-              io.grpc.MethodDescriptor.<com.smartfactory.Laminatepacking.ProductionSchedulingRequest, com.smartfactory.Laminatepacking.ProductionSchedulingResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest, com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProductionScheduling"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.ProductionSchedulingRequest.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.smartfactory.Laminatepacking.ProductionSchedulingResponse.getDefaultInstance()))
+                  com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse.getDefaultInstance()))
               .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("ProductionScheduling"))
               .build();
         }
@@ -312,57 +312,57 @@ public final class LaminatePackingGrpc {
 
     /**
      */
-    public void productionLineControl(com.smartfactory.Laminatepacking.ProductionLineControlRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionLineControlResponse> responseObserver) {
+    public void productionLineControl(com.smartfactory.LaminatePackingProto.ProductionLineControlRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionLineControlResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProductionLineControlMethod(), responseObserver);
     }
 
     /**
      */
-    public void startProduction(com.smartfactory.Laminatepacking.StartProductionRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.StartProductionResponse> responseObserver) {
+    public void startProduction(com.smartfactory.LaminatePackingProto.StartProductionRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.StartProductionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartProductionMethod(), responseObserver);
     }
 
     /**
      */
-    public void stopProduction(com.smartfactory.Laminatepacking.StopProductionRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.StopProductionResponse> responseObserver) {
+    public void stopProduction(com.smartfactory.LaminatePackingProto.StopProductionRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.StopProductionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopProductionMethod(), responseObserver);
     }
 
     /**
      */
-    public void addOrder(com.smartfactory.Laminatepacking.AddOrderRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.AddOrderResponse> responseObserver) {
+    public void addOrder(com.smartfactory.LaminatePackingProto.AddOrderRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.AddOrderResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOrderMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateOrder(com.smartfactory.Laminatepacking.UpdateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.UpdateOrderResponse> responseObserver) {
+    public void updateOrder(com.smartfactory.LaminatePackingProto.UpdateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.UpdateOrderResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrderMethod(), responseObserver);
     }
 
     /**
      */
-    public void productionSurveillance(com.smartfactory.Laminatepacking.ProductionSurveillanceRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionSurveillanceResponse> responseObserver) {
+    public void productionSurveillance(com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProductionSurveillanceMethod(), responseObserver);
     }
 
     /**
      */
-    public void packagingLineJamAlerts(com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse> responseObserver) {
+    public void packagingLineJamAlerts(com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPackagingLineJamAlertsMethod(), responseObserver);
     }
 
     /**
      */
-    public void productionScheduling(com.smartfactory.Laminatepacking.ProductionSchedulingRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionSchedulingResponse> responseObserver) {
+    public void productionScheduling(com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProductionSchedulingMethod(), responseObserver);
     }
 
@@ -372,57 +372,57 @@ public final class LaminatePackingGrpc {
             getProductionLineControlMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.ProductionLineControlRequest,
-                com.smartfactory.Laminatepacking.ProductionLineControlResponse>(
+                com.smartfactory.LaminatePackingProto.ProductionLineControlRequest,
+                com.smartfactory.LaminatePackingProto.ProductionLineControlResponse>(
                   this, METHODID_PRODUCTION_LINE_CONTROL)))
           .addMethod(
             getStartProductionMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.StartProductionRequest,
-                com.smartfactory.Laminatepacking.StartProductionResponse>(
+                com.smartfactory.LaminatePackingProto.StartProductionRequest,
+                com.smartfactory.LaminatePackingProto.StartProductionResponse>(
                   this, METHODID_START_PRODUCTION)))
           .addMethod(
             getStopProductionMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.StopProductionRequest,
-                com.smartfactory.Laminatepacking.StopProductionResponse>(
+                com.smartfactory.LaminatePackingProto.StopProductionRequest,
+                com.smartfactory.LaminatePackingProto.StopProductionResponse>(
                   this, METHODID_STOP_PRODUCTION)))
           .addMethod(
             getAddOrderMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.AddOrderRequest,
-                com.smartfactory.Laminatepacking.AddOrderResponse>(
+                com.smartfactory.LaminatePackingProto.AddOrderRequest,
+                com.smartfactory.LaminatePackingProto.AddOrderResponse>(
                   this, METHODID_ADD_ORDER)))
           .addMethod(
             getUpdateOrderMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.UpdateOrderRequest,
-                com.smartfactory.Laminatepacking.UpdateOrderResponse>(
+                com.smartfactory.LaminatePackingProto.UpdateOrderRequest,
+                com.smartfactory.LaminatePackingProto.UpdateOrderResponse>(
                   this, METHODID_UPDATE_ORDER)))
           .addMethod(
             getProductionSurveillanceMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.ProductionSurveillanceRequest,
-                com.smartfactory.Laminatepacking.ProductionSurveillanceResponse>(
+                com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest,
+                com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse>(
                   this, METHODID_PRODUCTION_SURVEILLANCE)))
           .addMethod(
             getPackagingLineJamAlertsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest,
-                com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse>(
+                com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest,
+                com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse>(
                   this, METHODID_PACKAGING_LINE_JAM_ALERTS)))
           .addMethod(
             getProductionSchedulingMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.smartfactory.Laminatepacking.ProductionSchedulingRequest,
-                com.smartfactory.Laminatepacking.ProductionSchedulingResponse>(
+                com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest,
+                com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse>(
                   this, METHODID_PRODUCTION_SCHEDULING)))
           .build();
     }
@@ -444,64 +444,64 @@ public final class LaminatePackingGrpc {
 
     /**
      */
-    public void productionLineControl(com.smartfactory.Laminatepacking.ProductionLineControlRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionLineControlResponse> responseObserver) {
+    public void productionLineControl(com.smartfactory.LaminatePackingProto.ProductionLineControlRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionLineControlResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProductionLineControlMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void startProduction(com.smartfactory.Laminatepacking.StartProductionRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.StartProductionResponse> responseObserver) {
+    public void startProduction(com.smartfactory.LaminatePackingProto.StartProductionRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.StartProductionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStartProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void stopProduction(com.smartfactory.Laminatepacking.StopProductionRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.StopProductionResponse> responseObserver) {
+    public void stopProduction(com.smartfactory.LaminatePackingProto.StopProductionRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.StopProductionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void addOrder(com.smartfactory.Laminatepacking.AddOrderRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.AddOrderResponse> responseObserver) {
+    public void addOrder(com.smartfactory.LaminatePackingProto.AddOrderRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.AddOrderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddOrderMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void updateOrder(com.smartfactory.Laminatepacking.UpdateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.UpdateOrderResponse> responseObserver) {
+    public void updateOrder(com.smartfactory.LaminatePackingProto.UpdateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.UpdateOrderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateOrderMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void productionSurveillance(com.smartfactory.Laminatepacking.ProductionSurveillanceRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionSurveillanceResponse> responseObserver) {
+    public void productionSurveillance(com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProductionSurveillanceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void packagingLineJamAlerts(com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse> responseObserver) {
+    public void packagingLineJamAlerts(com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPackagingLineJamAlertsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void productionScheduling(com.smartfactory.Laminatepacking.ProductionSchedulingRequest request,
-        io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionSchedulingResponse> responseObserver) {
+    public void productionScheduling(com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProductionSchedulingMethod(), getCallOptions()), request, responseObserver);
     }
@@ -523,56 +523,56 @@ public final class LaminatePackingGrpc {
 
     /**
      */
-    public com.smartfactory.Laminatepacking.ProductionLineControlResponse productionLineControl(com.smartfactory.Laminatepacking.ProductionLineControlRequest request) {
+    public com.smartfactory.LaminatePackingProto.ProductionLineControlResponse productionLineControl(com.smartfactory.LaminatePackingProto.ProductionLineControlRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProductionLineControlMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.StartProductionResponse startProduction(com.smartfactory.Laminatepacking.StartProductionRequest request) {
+    public com.smartfactory.LaminatePackingProto.StartProductionResponse startProduction(com.smartfactory.LaminatePackingProto.StartProductionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStartProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.StopProductionResponse stopProduction(com.smartfactory.Laminatepacking.StopProductionRequest request) {
+    public com.smartfactory.LaminatePackingProto.StopProductionResponse stopProduction(com.smartfactory.LaminatePackingProto.StopProductionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.AddOrderResponse addOrder(com.smartfactory.Laminatepacking.AddOrderRequest request) {
+    public com.smartfactory.LaminatePackingProto.AddOrderResponse addOrder(com.smartfactory.LaminatePackingProto.AddOrderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddOrderMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.UpdateOrderResponse updateOrder(com.smartfactory.Laminatepacking.UpdateOrderRequest request) {
+    public com.smartfactory.LaminatePackingProto.UpdateOrderResponse updateOrder(com.smartfactory.LaminatePackingProto.UpdateOrderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateOrderMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.ProductionSurveillanceResponse productionSurveillance(com.smartfactory.Laminatepacking.ProductionSurveillanceRequest request) {
+    public com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse productionSurveillance(com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProductionSurveillanceMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse packagingLineJamAlerts(com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest request) {
+    public com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse packagingLineJamAlerts(com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPackagingLineJamAlertsMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.smartfactory.Laminatepacking.ProductionSchedulingResponse productionScheduling(com.smartfactory.Laminatepacking.ProductionSchedulingRequest request) {
+    public com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse productionScheduling(com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProductionSchedulingMethod(), getCallOptions(), request);
     }
@@ -594,64 +594,64 @@ public final class LaminatePackingGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.ProductionLineControlResponse> productionLineControl(
-        com.smartfactory.Laminatepacking.ProductionLineControlRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.ProductionLineControlResponse> productionLineControl(
+        com.smartfactory.LaminatePackingProto.ProductionLineControlRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProductionLineControlMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.StartProductionResponse> startProduction(
-        com.smartfactory.Laminatepacking.StartProductionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.StartProductionResponse> startProduction(
+        com.smartfactory.LaminatePackingProto.StartProductionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStartProductionMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.StopProductionResponse> stopProduction(
-        com.smartfactory.Laminatepacking.StopProductionRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.StopProductionResponse> stopProduction(
+        com.smartfactory.LaminatePackingProto.StopProductionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopProductionMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.AddOrderResponse> addOrder(
-        com.smartfactory.Laminatepacking.AddOrderRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.AddOrderResponse> addOrder(
+        com.smartfactory.LaminatePackingProto.AddOrderRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddOrderMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.UpdateOrderResponse> updateOrder(
-        com.smartfactory.Laminatepacking.UpdateOrderRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.UpdateOrderResponse> updateOrder(
+        com.smartfactory.LaminatePackingProto.UpdateOrderRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateOrderMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.ProductionSurveillanceResponse> productionSurveillance(
-        com.smartfactory.Laminatepacking.ProductionSurveillanceRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse> productionSurveillance(
+        com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProductionSurveillanceMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse> packagingLineJamAlerts(
-        com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse> packagingLineJamAlerts(
+        com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPackagingLineJamAlertsMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.Laminatepacking.ProductionSchedulingResponse> productionScheduling(
-        com.smartfactory.Laminatepacking.ProductionSchedulingRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse> productionScheduling(
+        com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProductionSchedulingMethod(), getCallOptions()), request);
     }
@@ -684,36 +684,36 @@ public final class LaminatePackingGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_PRODUCTION_LINE_CONTROL:
-          serviceImpl.productionLineControl((com.smartfactory.Laminatepacking.ProductionLineControlRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionLineControlResponse>) responseObserver);
+          serviceImpl.productionLineControl((com.smartfactory.LaminatePackingProto.ProductionLineControlRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionLineControlResponse>) responseObserver);
           break;
         case METHODID_START_PRODUCTION:
-          serviceImpl.startProduction((com.smartfactory.Laminatepacking.StartProductionRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.StartProductionResponse>) responseObserver);
+          serviceImpl.startProduction((com.smartfactory.LaminatePackingProto.StartProductionRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.StartProductionResponse>) responseObserver);
           break;
         case METHODID_STOP_PRODUCTION:
-          serviceImpl.stopProduction((com.smartfactory.Laminatepacking.StopProductionRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.StopProductionResponse>) responseObserver);
+          serviceImpl.stopProduction((com.smartfactory.LaminatePackingProto.StopProductionRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.StopProductionResponse>) responseObserver);
           break;
         case METHODID_ADD_ORDER:
-          serviceImpl.addOrder((com.smartfactory.Laminatepacking.AddOrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.AddOrderResponse>) responseObserver);
+          serviceImpl.addOrder((com.smartfactory.LaminatePackingProto.AddOrderRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.AddOrderResponse>) responseObserver);
           break;
         case METHODID_UPDATE_ORDER:
-          serviceImpl.updateOrder((com.smartfactory.Laminatepacking.UpdateOrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.UpdateOrderResponse>) responseObserver);
+          serviceImpl.updateOrder((com.smartfactory.LaminatePackingProto.UpdateOrderRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.UpdateOrderResponse>) responseObserver);
           break;
         case METHODID_PRODUCTION_SURVEILLANCE:
-          serviceImpl.productionSurveillance((com.smartfactory.Laminatepacking.ProductionSurveillanceRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionSurveillanceResponse>) responseObserver);
+          serviceImpl.productionSurveillance((com.smartfactory.LaminatePackingProto.ProductionSurveillanceRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSurveillanceResponse>) responseObserver);
           break;
         case METHODID_PACKAGING_LINE_JAM_ALERTS:
-          serviceImpl.packagingLineJamAlerts((com.smartfactory.Laminatepacking.PackagingLineJamAlertsRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.PackagingLineJamAlertsResponse>) responseObserver);
+          serviceImpl.packagingLineJamAlerts((com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.PackagingLineJamAlertsResponse>) responseObserver);
           break;
         case METHODID_PRODUCTION_SCHEDULING:
-          serviceImpl.productionScheduling((com.smartfactory.Laminatepacking.ProductionSchedulingRequest) request,
-              (io.grpc.stub.StreamObserver<com.smartfactory.Laminatepacking.ProductionSchedulingResponse>) responseObserver);
+          serviceImpl.productionScheduling((com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -737,7 +737,7 @@ public final class LaminatePackingGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.smartfactory.Laminatepacking.getDescriptor();
+      return com.smartfactory.LaminatePackingProto.getDescriptor();
     }
 
     @java.lang.Override
