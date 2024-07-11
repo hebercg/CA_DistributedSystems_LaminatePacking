@@ -5,11 +5,11 @@ import io.grpc.ManagedChannelBuilder;
 
 import javax.swing.*;
 
-public class MainController {
+public class ProductionLineControl {
 
     private final com.smartfactory.LaminatePackingGrpc.LaminatePackingBlockingStub blockingStub;
 
-    public MainController() {
+    public ProductionLineControl() {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
                 .usePlaintext()
                 .build();
@@ -31,7 +31,7 @@ public class MainController {
     }
 
     public static void main(String[] args) {
-        MainController controller = new MainController();
+        ProductionLineControl controller = new ProductionLineControl();
         controller.addOrder();
     }
 }
