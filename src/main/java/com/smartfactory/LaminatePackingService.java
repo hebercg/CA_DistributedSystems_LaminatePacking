@@ -92,7 +92,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         String status = "UPDATED";
         String message = "Order " + orderId + " updated to quantity " + quantity + " with description \"" + description + "\".";
 
-        UpdateOrderResponse response = UpdateOrderResponse.newBuilder()
+        LaminatePackingProto.UpdateOrderResponse response = LaminatePackingProto.UpdateOrderResponse.newBuilder()
                 .setStatus(status)
                 .setMessage(message)
                 .build();
