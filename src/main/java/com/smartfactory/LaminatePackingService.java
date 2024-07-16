@@ -83,6 +83,23 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+    @Override
+    public void updateOrder(LaminatePackingProto.UpdateOrderRequest request, StreamObserver<LaminatePackingProto.UpdateOrderResponse> responseObserver) {
+        String orderId = request.getOrderID();
+        int quantity = request.getQuantity();
+        String description = request.getDescription();
+
+        String status = "UPDATED";
+        String message = "Order " + orderId + " updated to quantity " + quantity + " with description \"" + description + "\".";
+
+        UpdateOrderResponse response = UpdateOrderResponse.newBuilder()
+                .setStatus(status)
+                .setMessage(message)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder.forPort(50051)
