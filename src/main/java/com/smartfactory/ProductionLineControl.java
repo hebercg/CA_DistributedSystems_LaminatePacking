@@ -54,12 +54,29 @@ public class ProductionLineControl {
 
         JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
     }
+    public void updateOrder() {
+        String orderId = JOptionPane.showInputDialog("Enter Order ID:");
+        int quantity = Integer.parseInt(JOptionPane.showInputDialog("Enter Quantity:"));
+        String description = JOptionPane.showInputDialog("Enter Description:");
+
+        LaminatePackingProto.UpdateOrderRequest request = LaminatePackingProto.UpdateOrderRequest.newBuilder()
+                .setOrderID(orderId)
+                .setQuantity(quantity)
+                .setDescription(description)
+                .build();
+
+        LaminatePackingProto.UpdateOrderResponse response = blockingStub.updateOrder(request);
+
+        JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
+    }
+
 
     public static void main(String[] args) {
         ProductionLineControl controller = new ProductionLineControl();
         controller.addOrder();
         controller.startProduction();
         controller.stopProduction();
+        controller.updateOrder();
 
     }
 }
