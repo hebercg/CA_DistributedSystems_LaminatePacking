@@ -120,6 +120,24 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onCompleted();
     }
 
+    @Override
+    public void packagingLineJamAlerts(LaminatePackingProto.PackagingLineJamAlertsRequest request, StreamObserver<LaminatePackingProto.PackagingLineJamAlertsResponse> responseObserver) {
+        String sensorID = request.getSensorID();
+        String timestamp = request.getTimestamp();
+
+        String status = "ALERT";
+        String message = "Jam alert from sensor " + sensorID + " at " + timestamp;
+
+        LaminatePackingProto.PackagingLineJamAlertsResponse response = LaminatePackingProto.PackagingLineJamAlertsResponse.newBuilder()
+                .setStatus(status)
+                .setMessage(message)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder.forPort(50051)
