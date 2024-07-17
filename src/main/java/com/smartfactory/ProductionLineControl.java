@@ -71,12 +71,30 @@ public class ProductionLineControl {
     }
 
 
+    public void productionSurveillance() {
+        String stage = JOptionPane.showInputDialog("Enter Production Stage:");
+        String inspectionResult = JOptionPane.showInputDialog("Enter Inspection Result:");
+
+        LaminatePackingProto.ProductionSurveillanceRequest request = LaminatePackingProto.ProductionSurveillanceRequest.newBuilder()
+                .setStage(stage)
+                .setInspectionResult(inspectionResult)
+                .build();
+
+        LaminatePackingProto.ProductionSurveillanceResponse response = blockingStub.productionSurveillance(request);
+
+        JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
+    }
+
+
+
     public static void main(String[] args) {
         ProductionLineControl controller = new ProductionLineControl();
         controller.addOrder();
         controller.startProduction();
         controller.stopProduction();
         controller.updateOrder();
+        controller.productionSurveillance();
+
 
     }
 }

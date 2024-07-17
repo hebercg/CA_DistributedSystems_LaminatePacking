@@ -4,6 +4,7 @@ com/smartfactory/LaminatePackingProto$ProductionLineControlRequest$Builder.class
 com/smartfactory/LaminatePackingProto$AddOrderRequest$Builder.class
 com/smartfactory/LaminatePackingProto$PackagingLineJamAlertsResponseOrBuilder.class
 com/smartfactory/LaminatePackingProto$ProductionLineControlResponse$Builder.class
+com/smartfactory/ProductionLineControl.class
 com/smartfactory/LaminatePackingProto$UpdateOrderRequest.class
 com/smartfactory/LaminatePackingGrpc$1.class
 com/smartfactory/LaminatePackingProto$PackagingLineJamAlertsResponse$1.class
@@ -60,7 +61,6 @@ com/smartfactory/LaminatePackingProto$PackagingLineJamAlertsRequest$1.class
 com/smartfactory/LaminatePackingService.class
 com/smartfactory/LaminatePackingProto$ProductionSurveillanceResponse$Builder.class
 com/smartfactory/LaminatePackingProto$ProductionSchedulingResponse.class
-com/smartfactory/MainController.class
 com/smartfactory/LaminatePackingProto$StopProductionResponse$1.class
 com/smartfactory/LaminatePackingProto$StartProductionResponse$Builder.class
 com/smartfactory/LaminatePackingGrpc$LaminatePackingFutureStub.class

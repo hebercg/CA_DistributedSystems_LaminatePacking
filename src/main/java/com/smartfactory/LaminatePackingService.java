@@ -9,6 +9,7 @@ import com.smartfactory.LaminatePackingProto.StartProductionRequest;
 import com.smartfactory.LaminatePackingProto.StartProductionResponse;
 import com.smartfactory.LaminatePackingProto.StopProductionRequest;
 
+
 import java.io.IOException;
 
 public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc.LaminatePackingImplBase {
@@ -101,10 +102,24 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onCompleted();
     }
 
-    @Override
+
+   @Override
     public void productionSurveillance(LaminatePackingProto.ProductionSurveillanceRequest request, StreamObserver<LaminatePackingProto.ProductionSurveillanceResponse> responseObserver) {
-        super.productionSurveillance(request, responseObserver);
+        String stage = request.getStage();
+        String inspectionResult = request.getInspectionResult();
+
+        String status = "INSPECTED";
+        String message = "Inspection at stage " + stage + " result: " + inspectionResult;
+
+        LaminatePackingProto.ProductionSurveillanceResponse response = LaminatePackingProto.ProductionSurveillanceResponse.newBuilder()
+                .setStatus(status)
+                .setMessage(message)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
     }
+
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder.forPort(50051)
