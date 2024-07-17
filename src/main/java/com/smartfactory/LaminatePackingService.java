@@ -101,6 +101,11 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onCompleted();
     }
 
+    @Override
+    public void productionSurveillance(LaminatePackingProto.ProductionSurveillanceRequest request, StreamObserver<LaminatePackingProto.ProductionSurveillanceResponse> responseObserver) {
+        super.productionSurveillance(request, responseObserver);
+    }
+
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder.forPort(50051)
                 .addService(new LaminatePackingService())
