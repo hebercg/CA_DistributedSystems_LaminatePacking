@@ -99,6 +99,20 @@ public class ProductionLineControl {
         JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
     }
 
+    public void productionScheduling() {
+        String orderId = JOptionPane.showInputDialog("Enter Order ID:");
+        String scheduledTime = JOptionPane.showInputDialog("Enter Scheduled Time:");
+
+        LaminatePackingProto.ProductionSchedulingRequest request = LaminatePackingProto.ProductionSchedulingRequest.newBuilder()
+                .setOrderID(orderId)
+                .setScheduledTime(scheduledTime)
+                .build();
+
+        LaminatePackingProto.ProductionSchedulingResponse response = blockingStub.productionScheduling(request);
+
+        JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
+    }
+
 
 
     public static void main(String[] args) {
@@ -109,6 +123,7 @@ public class ProductionLineControl {
         controller.updateOrder();
         controller.productionSurveillance();
         controller.packagingLineJamAlerts();
+        controller.productionScheduling();
 
 
     }

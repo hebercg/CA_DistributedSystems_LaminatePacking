@@ -136,6 +136,22 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+    @Override
+    public void productionScheduling(LaminatePackingProto.ProductionSchedulingRequest request, StreamObserver<LaminatePackingProto.ProductionSchedulingResponse> responseObserver) {
+        String orderId = request.getOrderID();
+        String scheduledTime = request.getScheduledTime();
+
+        String status = "SCHEDULED";
+        String message = "Order " + orderId + " scheduled for " + scheduledTime;
+
+        LaminatePackingProto.ProductionSchedulingResponse response = LaminatePackingProto.ProductionSchedulingResponse.newBuilder()
+                .setStatus(status)
+                .setMessage(message)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
 
 
 
