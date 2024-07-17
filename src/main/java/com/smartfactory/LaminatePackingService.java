@@ -13,7 +13,7 @@ import com.smartfactory.LaminatePackingProto.StartProductionResponse;
 import java.io.IOException;
 
 public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc.LaminatePackingImplBase {
-
+    // RPCs implementation
     @Override
     public void productionLineControl(ProductionLineControlRequest request, StreamObserver<ProductionLineControlResponse> responseObserver) {
         String orderId = request.getOrderID();
@@ -31,7 +31,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
-
+    // Method to start the production
     @Override
     public void startProduction(StartProductionRequest request, StreamObserver<StartProductionResponse> responseObserver) {
         String orderId = request.getOrderID();
@@ -49,7 +49,8 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onCompleted();
     }
 
-    // Implement other RPCs
+
+    // Method to stop the production
 
     @Override
     public void stopProduction(com.smartfactory.LaminatePackingProto.StopProductionRequest request, StreamObserver<com.smartfactory.LaminatePackingProto.StopProductionResponse> responseObserver) {
@@ -67,6 +68,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+    // Method to add a new order
     @Override
     public void addOrder(LaminatePackingProto.AddOrderRequest request, StreamObserver<LaminatePackingProto.AddOrderResponse> responseObserver) {
         String orderId = request.getOrderID();
@@ -84,6 +86,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+    // Method to update current order
     @Override
     public void updateOrder(LaminatePackingProto.UpdateOrderRequest request, StreamObserver<LaminatePackingProto.UpdateOrderResponse> responseObserver) {
         String orderId = request.getOrderID();
@@ -102,6 +105,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onCompleted();
     }
 
+    // Method to monitor the production line
 
    @Override
     public void productionSurveillance(LaminatePackingProto.ProductionSurveillanceRequest request, StreamObserver<LaminatePackingProto.ProductionSurveillanceResponse> responseObserver) {
@@ -119,7 +123,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
-
+    // Method to monitor if the packing get stuck during the production
     @Override
     public void packagingLineJamAlerts(LaminatePackingProto.PackagingLineJamAlertsRequest request, StreamObserver<LaminatePackingProto.PackagingLineJamAlertsResponse> responseObserver) {
         String sensorID = request.getSensorID();
@@ -136,6 +140,8 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+    // Method to schedule or to add what needs to be produced
+
     @Override
     public void productionScheduling(LaminatePackingProto.ProductionSchedulingRequest request, StreamObserver<LaminatePackingProto.ProductionSchedulingResponse> responseObserver) {
         String orderId = request.getOrderID();
