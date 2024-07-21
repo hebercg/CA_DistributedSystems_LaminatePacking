@@ -85,6 +85,14 @@ public class ProductionLineControl {
         JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
     }
 
+    public void visualInspection() {
+        LaminatePackingProto.VisualInspectionRequest request = LaminatePackingProto.VisualInspectionRequest.newBuilder().build();
+
+        LaminatePackingProto.VisualInspectionResponse response = blockingStub.visualInspection(request);
+
+        JOptionPane.showMessageDialog(null, "Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
+    }
+
     public void packagingLineJamAlerts() {
         String sensorID = JOptionPane.showInputDialog("Enter Sensor ID:");
         String timestamp = JOptionPane.showInputDialog("Enter Timestamp:");
@@ -124,6 +132,7 @@ public class ProductionLineControl {
         controller.productionSurveillance();
         controller.packagingLineJamAlerts();
         controller.productionScheduling();
+        controller.visualInspection();
 
 
     }

@@ -262,6 +262,37 @@ public final class LaminatePackingGrpc {
     return getProductionSchedulingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.VisualInspectionRequest,
+      com.smartfactory.LaminatePackingProto.VisualInspectionResponse> getVisualInspectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "VisualInspection",
+      requestType = com.smartfactory.LaminatePackingProto.VisualInspectionRequest.class,
+      responseType = com.smartfactory.LaminatePackingProto.VisualInspectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.VisualInspectionRequest,
+      com.smartfactory.LaminatePackingProto.VisualInspectionResponse> getVisualInspectionMethod() {
+    io.grpc.MethodDescriptor<com.smartfactory.LaminatePackingProto.VisualInspectionRequest, com.smartfactory.LaminatePackingProto.VisualInspectionResponse> getVisualInspectionMethod;
+    if ((getVisualInspectionMethod = LaminatePackingGrpc.getVisualInspectionMethod) == null) {
+      synchronized (LaminatePackingGrpc.class) {
+        if ((getVisualInspectionMethod = LaminatePackingGrpc.getVisualInspectionMethod) == null) {
+          LaminatePackingGrpc.getVisualInspectionMethod = getVisualInspectionMethod =
+              io.grpc.MethodDescriptor.<com.smartfactory.LaminatePackingProto.VisualInspectionRequest, com.smartfactory.LaminatePackingProto.VisualInspectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "VisualInspection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.smartfactory.LaminatePackingProto.VisualInspectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.smartfactory.LaminatePackingProto.VisualInspectionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LaminatePackingMethodDescriptorSupplier("VisualInspection"))
+              .build();
+        }
+      }
+    }
+    return getVisualInspectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -366,6 +397,13 @@ public final class LaminatePackingGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProductionSchedulingMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void visualInspection(com.smartfactory.LaminatePackingProto.VisualInspectionRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.VisualInspectionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVisualInspectionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -424,6 +462,13 @@ public final class LaminatePackingGrpc {
                 com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest,
                 com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse>(
                   this, METHODID_PRODUCTION_SCHEDULING)))
+          .addMethod(
+            getVisualInspectionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.smartfactory.LaminatePackingProto.VisualInspectionRequest,
+                com.smartfactory.LaminatePackingProto.VisualInspectionResponse>(
+                  this, METHODID_VISUAL_INSPECTION)))
           .build();
     }
   }
@@ -505,6 +550,14 @@ public final class LaminatePackingGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProductionSchedulingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void visualInspection(com.smartfactory.LaminatePackingProto.VisualInspectionRequest request,
+        io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.VisualInspectionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getVisualInspectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -575,6 +628,13 @@ public final class LaminatePackingGrpc {
     public com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse productionScheduling(com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProductionSchedulingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.smartfactory.LaminatePackingProto.VisualInspectionResponse visualInspection(com.smartfactory.LaminatePackingProto.VisualInspectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getVisualInspectionMethod(), getCallOptions(), request);
     }
   }
 
@@ -655,6 +715,14 @@ public final class LaminatePackingGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProductionSchedulingMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.smartfactory.LaminatePackingProto.VisualInspectionResponse> visualInspection(
+        com.smartfactory.LaminatePackingProto.VisualInspectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getVisualInspectionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PRODUCTION_LINE_CONTROL = 0;
@@ -665,6 +733,7 @@ public final class LaminatePackingGrpc {
   private static final int METHODID_PRODUCTION_SURVEILLANCE = 5;
   private static final int METHODID_PACKAGING_LINE_JAM_ALERTS = 6;
   private static final int METHODID_PRODUCTION_SCHEDULING = 7;
+  private static final int METHODID_VISUAL_INSPECTION = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -714,6 +783,10 @@ public final class LaminatePackingGrpc {
         case METHODID_PRODUCTION_SCHEDULING:
           serviceImpl.productionScheduling((com.smartfactory.LaminatePackingProto.ProductionSchedulingRequest) request,
               (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.ProductionSchedulingResponse>) responseObserver);
+          break;
+        case METHODID_VISUAL_INSPECTION:
+          serviceImpl.visualInspection((com.smartfactory.LaminatePackingProto.VisualInspectionRequest) request,
+              (io.grpc.stub.StreamObserver<com.smartfactory.LaminatePackingProto.VisualInspectionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -784,6 +857,7 @@ public final class LaminatePackingGrpc {
               .addMethod(getProductionSurveillanceMethod())
               .addMethod(getPackagingLineJamAlertsMethod())
               .addMethod(getProductionSchedulingMethod())
+              .addMethod(getVisualInspectionMethod())
               .build();
         }
       }

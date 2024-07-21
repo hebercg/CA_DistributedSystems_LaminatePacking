@@ -97,3 +97,9 @@ message ProductionSchedulingResponse {
   string status = 1;
   string message = 2;
 }
+message VisualInspectionRequest {}
+
+message VisualInspectionResponse {
+  string status = 1;
+  string message = 2;
+}

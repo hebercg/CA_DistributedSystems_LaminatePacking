@@ -14,6 +14,7 @@ service LaminatePacking {
   rpc ProductionSurveillance(ProductionSurveillanceRequest) returns (ProductionSurveillanceResponse);
   rpc PackagingLineJamAlerts(PackagingLineJamAlertsRequest) returns (PackagingLineJamAlertsResponse);
   rpc ProductionScheduling(ProductionSchedulingRequest) returns (ProductionSchedulingResponse);
+  rpc VisualInspection(VisualInspectionRequest) returns (VisualInspectionResponse);
 }
 
 message ProductionLineControlRequest {
@@ -93,6 +94,12 @@ message ProductionSchedulingRequest {
 }
 
 message ProductionSchedulingResponse {
+  string status = 1;
+  string message = 2;
+}
+message VisualInspectionRequest {}
+
+message VisualInspectionResponse {
   string status = 1;
   string message = 2;
 }
