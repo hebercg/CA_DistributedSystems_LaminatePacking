@@ -158,6 +158,29 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
+    @Override
+    public void visualInspection(LaminatePackingProto.VisualInspectionRequest request, StreamObserver<LaminatePackingProto.VisualInspectionResponse> responseObserver) {
+        // Image processing simulation
+        boolean isAnomalyDetected = processImage();
+
+        String status = isAnomalyDetected ? "Anomaly Detected" : "No Anomaly";
+        String message = isAnomalyDetected ? "Anomaly detected in the inspection." : "No issues found in the inspection.";
+
+        LaminatePackingProto.VisualInspectionResponse response = LaminatePackingProto.VisualInspectionResponse.newBuilder()
+                .setStatus(status)
+                .setMessage(message)
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
+    }
+
+    private boolean processImage() {
+        // Simulating the image processing and problem detection
+        // For test purpose randomly return true (Anomaly detected) or false (no Anomaly)
+        return Math.random() > 0.5;
+    }
+
 
 
 
