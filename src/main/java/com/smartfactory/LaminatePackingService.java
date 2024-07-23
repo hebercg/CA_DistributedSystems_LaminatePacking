@@ -19,9 +19,9 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         String orderId = request.getOrderID();
         int quantity = request.getQuantity();
 
-        // Process the order
+        // Order added to the system
         String status = "Success";
-        String message = "Order " + orderId + " quantity " + quantity + " processed successfully.";
+        String message = "Order " + orderId + " quantity " + quantity + " order successfully added to production";
 
         ProductionLineControlResponse response = ProductionLineControlResponse.newBuilder()
                 .setStatus(status)
@@ -31,7 +31,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
-    // Method to start the production
+    // start the production
     @Override
     public void startProduction(StartProductionRequest request, StreamObserver<StartProductionResponse> responseObserver) {
         String orderId = request.getOrderID();
@@ -50,7 +50,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
     }
 
 
-    // Method to stop the production
+    // stop the production
 
     @Override
     public void stopProduction(com.smartfactory.LaminatePackingProto.StopProductionRequest request, StreamObserver<com.smartfactory.LaminatePackingProto.StopProductionResponse> responseObserver) {
@@ -68,7 +68,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
-    // Method to add a new order
+    // Aadd a new order
     @Override
     public void addOrder(LaminatePackingProto.AddOrderRequest request, StreamObserver<LaminatePackingProto.AddOrderResponse> responseObserver) {
         String orderId = request.getOrderID();
@@ -86,7 +86,7 @@ public class LaminatePackingService extends com.smartfactory.LaminatePackingGrpc
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }
-    // Method to update current order
+    // Update current order if needed
     @Override
     public void updateOrder(LaminatePackingProto.UpdateOrderRequest request, StreamObserver<LaminatePackingProto.UpdateOrderResponse> responseObserver) {
         String orderId = request.getOrderID();
